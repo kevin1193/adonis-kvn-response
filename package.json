@@ -2,7 +2,7 @@
   "name": "adonis-kvn-response",
   "version": "1.0.0",
   "description": "AdonisJS response helper for REST API",
-  "main": "index.js",
+  "main": "build/src/providers/KvnResponseProvider.js",
   "dependencies": {
     "adonis-bumblebee-ts": "^1.0.0"
   },
