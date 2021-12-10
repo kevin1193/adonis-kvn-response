@@ -1,6 +1,6 @@
 {
   "name": "adonis-kvn-response",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "AdonisJS response helper for REST API",
   "main": "build/src/providers/KvnResponseProvider.js",
   "dependencies": {
@@ -28,6 +28,7 @@
     "build": "npm run compile"
   },
   "adonisjs": {
+    "types": "adonis-kvn-response",
     "providers": [
       "adonis-kvn-response"
     ]
@@ -37,7 +38,8 @@
     "adonisjs",
     "api",
     "rest",
-    "provider"
+    "provider",
+    "response"
   ],
   "author": "Kevin Abestilla",
   "license": "MIT",
