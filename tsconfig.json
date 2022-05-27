@@ -9,6 +9,7 @@
     "emitDecoratorMetadata": true,
     "noUnusedLocals": true,
     "pretty": true,
+    "skipLibCheck": true,
     "lib": [
       "esnext"
     ],
@@ -16,5 +17,9 @@
       "@types/node",
       "@adonisjs/core"
     ]
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
 }
