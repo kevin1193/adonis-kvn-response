@@ -40,13 +40,13 @@ For TypeScript projects add to `tsconfig.json` file:
 
 ## Example
 
-# response.ok()
+### response.ok()
 ```
 public async someFunction({ response, auth }: HttpContextContract) {
   return response.ok('Your messaged here.')
 }
 ```
-# response.data()
+### response.data()
 ```
 public async someFunction({ response, auth }: HttpContextContract) {
   return response.data({
@@ -55,7 +55,7 @@ public async someFunction({ response, auth }: HttpContextContract) {
   }, 'Your messaged here is optional')
 }
 ```
-# response.resource()
+### response.resource()
 Note: Need to install adonis-bumblebee-ts to be able to use this function for transforming data
 ```
 public async listItems({ response, auth, transform }: HttpContextContract) {
@@ -66,7 +66,7 @@ public async showItem({ response, auth, transform }: HttpContextContract) {
   return response.resource(await transform.item(item, ItemTransformer))
 }
 ```
-# response.accepted()
+### response.accepted()
 Note: For creating record status code = 201
 ```
 public async store({ response, auth, transform }: HttpContextContract) {
@@ -76,14 +76,14 @@ public async store({ response, auth, transform }: HttpContextContract) {
   })
 }
 ```
-# response.error()
+#### response.error()
 
-# response.unableToProcess()
+### response.unableToProcess()
 
-# response.notFound()
+### response.notFound()
 
-# response.forbidden()
+### response.forbidden()
 
-# response.unauthorized()
+### response.unauthorized()
 
-# response.badRequest()
+### response.badRequest()
