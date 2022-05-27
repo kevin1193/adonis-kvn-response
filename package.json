@@ -1,6 +1,6 @@
 {
   "name": "adonis-kvn-response",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "AdonisJS response helper for REST API",
   "main": "build/src/providers/KvnResponseProvider.js",
   "dependencies": {
@@ -28,7 +28,7 @@
     "build": "npm run compile"
   },
   "adonisjs": {
-    "types": "clear",
+    "types": "adonis-kvn-response/build/adonis-typings",
     "providers": [
       "adonis-kvn-response"
     ]
