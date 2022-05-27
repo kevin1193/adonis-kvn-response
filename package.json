@@ -1,6 +1,6 @@
 {
   "name": "adonis-kvn-response",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "AdonisJS response helper for REST API",
   "main": "build/src/providers/KvnResponseProvider.js",
   "dependencies": {

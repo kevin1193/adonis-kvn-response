@@ -33,7 +33,57 @@ For TypeScript projects add to `tsconfig.json` file:
 "compilerOptions": {
   "types": [
     "...other packages",
-    "adonis-kvn-response"
+    "adonis-kvn-response/build/adonis-typings"
   ]
 }
 ```
+
+## Example
+
+# response.ok()
+```
+public async someFunction({ response, auth }: HttpContextContract) {
+  return response.ok('Your messaged here.')
+}
+```
+# response.data()
+```
+public async someFunction({ response, auth }: HttpContextContract) {
+  return response.data({
+    email: email,
+    name: name
+  }, 'Your messaged here is optional')
+}
+```
+# response.resource()
+Note: Need to install adonis-bumblebee-ts to be able to use this function for transforming data
+```
+public async listItems({ response, auth, transform }: HttpContextContract) {
+  return response.resource(await transform.collection(items, ItemTransformer))
+}
+
+public async showItem({ response, auth, transform }: HttpContextContract) {
+  return response.resource(await transform.item(item, ItemTransformer))
+}
+```
+# response.accepted()
+Note: For creating record status code = 201
+```
+public async store({ response, auth, transform }: HttpContextContract) {
+  return response.accepted({
+    id: id,
+    name: name
+  })
+}
+```
+# response.error()
+
+# response.unableToProcess()
+
+# response.notFound()
+
+# response.forbidden()
+
+# response.unauthorized()
+
+# response.badRequest()
