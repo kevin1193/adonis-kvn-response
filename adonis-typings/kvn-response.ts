@@ -1,4 +1,9 @@
 import TransformerAbstractI from 'adonis-bumblebee-ts/build/Bumblebee/TransformerAbstract'
+declare module '@ioc:Adonis/Core/HttpContext' {
+    interface HttpContextContract {
+        transform?: any;
+    }
+}
 
 declare module '@ioc:Adonis/Core/Response' {
   interface ResponseContract {
